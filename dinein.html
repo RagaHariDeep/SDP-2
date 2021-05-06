@@ -471,7 +471,14 @@ li.init {
                         </div>
                     <center>
                         <div class="form-submit">
-                            <button style="font-size: 20px;" type="submit" class="submit" id="submit" name="submit" onClick="window.location.href='dsuccess.html';">Book Now</button>
+                            <input type="submit" value="Book now" class="submit" id="submit" name="submit" onclick="dsuccess()"/>
+                              <script>
+                                    function dsuccess()
+                                     {
+                                      window.location.href="dsuccess.html";  
+                                     }
+
+                            </script>
                             <a href="#" class="vertify-booking">Verify your booking info from your email</a>
                         </div>
                     </center>
