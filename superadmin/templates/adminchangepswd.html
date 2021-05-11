@@ -1,0 +1,53 @@
+{% load static %}
+{% extends 'adminhome.html' %}
+{% block title %}
+<title>smchangepswd</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/adminchangepswd.css')}}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+{% endblock %}
+
+{% block content %}
+{{msg}}
+<div class="login-form">
+      <form action="smchangepassword" method="POST">
+        <div class="form-group">
+            <label style="color: black">Enter Old Password:</label>
+          <input type="password"  class="form-control" id="2" placeholder="Old Password" required="required" name="oldpassword"/>
+          <span id="span2"></span>
+        </div>
+         <div class="form-group">
+            <label style="color: black">Enter New Password:</label>
+          <input type="password" onblur="veripass1()" class="form-control" id="2" placeholder="Password" required="required" name="password"/>
+          <span id="span2"></span>
+        </div>
+        <div class="form-group">
+          <label style="color: black">Confirm New Password:</label>
+          <input type="password" class="form-control" onblur="VerifyPass()" id="3" placeholder="Confirm Password" required="required">
+          <span id="span3"></span><br/>
+        <div class="form-group">
+          <button type="submit" class="b
+          tn btn-danger btn-lg">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      
+function veripass1() {
+  var p = document.getElementById("2").value;
+  if (p.length < 6) {
+    document.getElementById("span2").innerHTML =
+      "password must contain atleast 6 charcters";
+  }
+}
+function VerifyPass() {
+  var pass = document.getElementById("2").value;
+  var verpass = document.getElementById("3").value;
+
+  if (pass == verpass) {
+  } else {
+    document.getElementById("span3").innerHTML = "Password Mismatch";
+  }
+}
+    </script>
+{% endblock %}

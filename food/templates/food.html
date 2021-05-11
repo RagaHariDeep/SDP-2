@@ -1,0 +1,56 @@
+{%load static %}
+<html>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+	<head>
+		<style>
+     body{
+            margin: 0;
+            background-color:#ffd9b0;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+                }
+
+    
+        </style>
+    </head>
+    <body>
+   
+    <nav style="margin: 0%;padding: 0%;">
+        <a href="{% url 'indexfunction' %}"> <img src="{% static 'images/hilton.png' %}" alt="hilton logo" style="width: 3cm;"> </a>
+          {% if not request.session.email %}
+            <a href = "{% url 'registrationpage' %}" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 120px; color: #093050;text-decoration: none; ">
+              Join Us |
+            </a>
+            <a href = "{% url 'loginpage' %}" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 50px; color: #093050;text-decoration: none; ">
+              Login
+          </a>
+          {% else %}
+          <a href = "#" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 139px; color: #093050;text-decoration: none; ">
+            {{request.session.name}} |
+          </a>
+          <a href = "{% url 'logout' %}" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 50px; color: #093050;text-decoration: none; ">
+             Logout
+        </a>
+        <a href = "{%url 'mybookings' %}" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 290px; color: #093050;text-decoration: none; "> My Bookings</a>
+           {% endif %}
+    </nav>
+ <div class="dinein">
+    <center>
+    <a href ="{% url 'dineinpage' %}" style="font-family: 'Rubik', sans-serif; font-size: 40px; text-decoration: none; color: #F55F37; ">
+        <img src="{% static 'images/dinein.png' %}" alt="Guest Room" style="width:40%">
+         <center>
+         Dine In</a>
+        </center>
+    </center>
+</div>
+    </body>
+
+
+</html>

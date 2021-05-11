@@ -1,0 +1,499 @@
+{%load static %}
+<html>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+	<head>
+		<style>
+    body
+    {
+            margin: 0;
+            background-color:#ffd9b0;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+    }
+
+/* @extend display-flex; */
+display-flex, .booking-content {
+  display: flex;
+  display: -webkit-flex; }
+
+/* @extend list-type-ulli; */
+list-type-ulli, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+a:focus, a:active {
+  text-decoration: none;
+  outline: none;
+  transition: all 300ms ease 0s;
+  -moz-transition: all 300ms ease 0s;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  -ms-transition: all 300ms ease 0s; }
+
+input, select, textarea {
+  outline: none;
+  appearance: unset !important;
+  -moz-appearance: unset !important;
+  -webkit-appearance: unset !important;
+  -o-appearance: unset !important;
+  -ms-appearance: unset !important; }
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  margin: 0; }
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important; }
+
+input[type=checkbox] {
+  appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  -webkit-appearance: checkbox !important;
+  -o-appearance: checkbox !important;
+  -ms-appearance: checkbox !important; }
+
+input[type=radio] {
+  appearance: radio !important;
+  -moz-appearance: radio !important;
+  -webkit-appearance: radio !important;
+  -o-appearance: radio !important;
+  -ms-appearance: radio !important; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+figure {
+  margin: 0; }
+
+p {
+  margin-bottom: 0px;
+  text-align: center; }
+
+h2 {
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+  font-family:'Rubik', sans-serif; 
+  font-size: 40px; 
+  color : #ffffff ;
+
+  text-align: center;
+  margin-bottom: 28px; }
+
+.clear {
+  clear: both; }
+
+  .form-radio{
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+
+  font-weight: 400;
+  font-family: 'Rubik', sans-serif; 
+  font-size: 20px;
+   color : #ffffff ;
+  margin: 0px; }
+
+.main {
+  padding: 115px 0;
+  position: relative; }
+
+.container {
+  width: 1500px;
+  height: 700px;
+  background: #fff;
+  margin: 0 auto;
+  box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px; }
+
+.booking-content {
+  flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap; }
+
+.booking-image {
+  width: 70%;
+  height: 300px;
+  margin-bottom: -8px; }
+
+.booking-img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.booking-form {
+  width: 30%;
+  height: 700px;
+  background: #111;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.form-radio {
+  margin-bottom: 65px;
+  padding-top: 20px; }
+  .form-radio input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -9999px; }
+  .form-radio label {
+    padding-top: 4px; }
+  .form-radio input + label {
+    margin: 0 3px;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    border: solid 2px #ebebeb;
+    background-color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, box-shadow .15s ease-out;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%; }
+  .form-radio input:checked + label {
+    background-color: #111;
+    color: #FFF;
+    border-color: whitesmoke;
+    z-index: 1; }
+  .form-radio input:focus + label {
+    outline: none; }
+  .form-radio input:hover {
+    background-color: #111;
+    color: #FFF;
+    border-color: #111; }
+
+.radio-item-list {
+  margin: 0 -3px; }
+
+
+  .active input + label {
+    margin-right: 59px; }
+
+form {
+  padding: 72px 70px 70px 70px; }
+
+.form-group {
+  margin-bottom: 10px;
+  position: relative; 
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  background-color: whitesmoke;
+  }
+
+.form-input {
+  padding-top: 21px; 
+  text-align: center;}
+
+.form-label {
+  position: absolute;
+  transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -webkit-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  color: #bebebe;
+  left: 0;
+  top: 23px; }
+
+input {
+  transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  padding-top: 10px;
+  -webkit-appearance: none; }
+  input:focus + .form-label, input:valid + .form-label {
+    top: 1px;
+    font-size: 11px;
+    color: #edb77d; }
+
+input, select {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  align-items: center;
+  font-size: 20px;
+  border: none;
+  font-family:'Rubik', sans-serif; 
+  color: #fff;
+  background: transparent;
+  padding: 4px 0; }
+  input:focus, select:focus {
+    border-bottom: 1px solid #edb77d; }
+
+
+
+input::-webkit-input-placeholder {
+  color: #bebebe; }
+input::-moz-placeholder {
+  color: #bebebe; }
+input:-ms-input-placeholder {
+  color: #bebebe; }
+input:-moz-placeholder {
+  color: #bebebe; }
+
+.submit {
+  width: auto;
+  text-align: center;
+  background: #edb77d;
+  color: #fff;
+  padding: 15px 43px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  cursor: pointer; }
+  .submit:hover {
+    background: #e79e50; }
+
+ul {
+  background: 0 0;
+  z-index: 9;
+  border-bottom: 1px solid #999;
+  padding-top: 15px; }
+
+ul li {
+  padding: 5px 0px;
+  z-index: 2;
+  color: #bebebe; }
+
+ul li:not(.init) {
+  display: none;
+  background: #fff;
+  color: #222;
+  padding: 5px 10px; }
+
+ul li:not(.init):hover, ul li.selected:not(.init) {
+  background: #edb77d; }
+
+li.init {
+  cursor: pointer;
+  position: relative; }
+  li.init:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    font-size: 20px;
+    color: #bebebe;
+    font-family: 'rubrik' , sans-serif;
+    content: '\f2f2'; }
+
+.label-radio {
+  display: block;
+  margin-bottom: 18px; }
+
+.vertify-booking {
+  color: #edb77d;
+  font-family: 'Rubik', sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 14px;
+  display: block;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s; }
+  .vertify-booking:hover {
+    text-decoration: underline; }
+
+.select-list {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 47px; }
+
+.list-item {
+  position: absolute;
+  width: 100%; }
+
+#time {
+  z-index: 99; }
+
+
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: calc( 100% - 30px);
+    max-width: 100%;
+    background: transparent; }
+
+  .booking-content {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column; }
+
+  .booking-image, .booking-form {
+    width: 100%; }
+
+
+
+  .booking-form {
+    order: 1;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; }
+
+  .booking-img {
+   
+    width: 100%; } }
+@media screen and (max-width: 480px) {
+  .radio-item {
+    display: block;
+    margin-bottom: 15px;
+    width: 150px; }
+
+  .active {
+    padding: 7px 1px; }
+
+  form {
+    padding: 72px 40px 70px 40px; } }
+
+  option{
+      text-align: center;
+  }
+
+
+        </style>
+<script>
+    
+</script>
+    </head>
+    <body>
+        <nav style="margin: 0%;padding: 0%;">
+        <a href="{% url 'indexfunction' %}"> <img src="{% static 'images/hilton.png' %}" alt="hilton logo" style="width: 3cm;"> </a>
+          {% if not request.session.email %}
+            <a href = "{% url 'registrationpage' %}" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 120px; color: #093050;text-decoration: none; ">
+              Join Us |
+            </a>
+            <a href = "{% url 'loginpage' %}" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 50px; color: #093050;text-decoration: none; ">
+              Login
+          </a>
+          {% else %}
+          <a href = "#" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 139px; color: #093050;text-decoration: none; ">
+            {{request.session.name}} |
+          </a>
+          <a href = "{% url 'logout' %}" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 50px; color: #093050;text-decoration: none; ">
+             Logout
+        </a>
+        <a href = "{%url 'mybookings' %}" style="font-family: 'Rubik', sans-serif; font-size: 25px; position: absolute; top:40px; right: 290px; color: #093050;text-decoration: none; "> My Bookings</a>
+           {% endif %}
+    </nav>
+    
+    <div class="main" style="position: absolute; left: 5%;">
+
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-image">
+                    <img class="booking-img" src="{% static 'images/reservation.jpg' %}" alt="Booking Image">
+                </div>
+                <div class="booking-form">
+                    <form id="booking-form" action="{% url 'bookdinein' %}" method="POST">
+                         {% csrf_token %}   
+                        <h2>Dine-In Reservation</h2>
+                        
+                        <div class="form-group">
+                            <center>
+                            <div class="select-list">
+                                <select name="time" id="time" name="time"  style = "color: black; text-align: center;"required>
+                                    <option value="">Time</option>
+                                    <option value="6pm">6:00 PM</option>
+                                    <option value="6:30pm">6:30 PM</option>
+                                    <option value="7pm">7:00 PM</option>
+                                    <option value="7:30pm">7:30 PM</option>
+                                    <option value="8pm">8:00 PM</option>
+                                    <option value="8:30pm">8:30 PM</option>
+                                    <option value="9pm">9:00 PM</option>
+                                    <option value="9:30pm">9:30 PM</option>
+                                </select>
+                            </div>
+                        </center>
+                        </div>
+                        <div class="form-radio">
+                            <label class="label-radio"> Select Your Dining Space</label>
+                            <div class="radio-item-list">
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="2" id="number_people_2" />
+                                    <label for="number_people_2">2</label>
+                                </span>
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="4" id="number_people_4" checked="checked" />
+                                    <label for="number_people_4">4</label>
+                                </span>
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="6" id="number_people_6" />
+                                    <label for="number_people_6">6</label>
+                                </span>
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="8" id="number_people_8" />
+                                    <label for="number_people_8">8</label>
+                                </span>
+                                <span class="radio-item">
+                                    <input type="radio" name="number_people" value="10" id="number_people_10" />
+                                    <label for="number_people_10">10</label>
+                                </span>
+                            </div>
+                        </div>
+                        <h1 style="color: red;">{{msg}}</h1>
+                    <center>
+                        <div class="form-submit">
+                            <input type="submit" class="submit" id="submit" name="submit" />
+                            <a href="#" class="vertify-booking">Verify your booking info from your email</a>
+                        </div>
+                    </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </body>
+
+</html>
